@@ -1,18 +1,6 @@
 # Bilagsmatch
 
-Prototype til godkendelsesopgave 1, Innovation og ny teknologi (INNT), CBS E2026.
-Udviklet af Jakob Sabroe Busk.
-
-## Hvad appen gør
-
-I små virksomheder bliver indkøb betalt med firmakortet, men kvitteringen ender i en
-lomme eller en mailtråd. Bogholderiet sidder tilbage med en kortpostering uden bilag —
-og fra 1. januar 2026 er digital bogføring et lovkrav også for personligt ejede
-virksomheder over 300.000 kr. i omsætning.
-
-Appen viser posteringerne fra firmakortet, lader brugeren fotografere kvitteringen på
-stedet, og bruger en vision-model til at foreslå kategori og momsbeløb. Brugeren
-godkender eller retter — modellen foreslår, mennesket beslutter.
+Prototype til godkendelsesopgave 1, Innovation og ny teknologi.
 
 Tre skærme:
 
@@ -22,8 +10,7 @@ Tre skærme:
 
 ## Demovideo
 
-[Indsæt link her — YouTube (ikke-listet) eller en fil i repoet]
-
+[Demovideo](https://www.icloud.com/photos/#/icloudlinks/084iAnqBCAnj9qxLkO6sq42Xw/) 
 ## Sådan køres projektet
 
 ```bash
@@ -37,24 +24,6 @@ en fysisk enhed.
 AI-scanningen kører uden opsætning: uden API-nøgle returnerer `services/aiScan.js` et
 simuleret svar, så flowet kan demonstreres. Vil du bruge den rigtige model, indsættes
 nøglen i toppen af den fil.
-
-## Teknisk
-
-- **Expo / React Native**, oprettet med `create-expo-app --template blank`
-- **React Navigation** (native stack) mellem de tre skærme
-- **React Context** til delt state
-- **expo-image-picker** til kameraet
-- **StyleSheet** i `styles/styles.js`, med design-tokens i `styles/theme.js`
-- **IBM Plex Serif / Sans** via `@expo-google-fonts`
-
-```
-App.js                      navigation og provider
-context/BilagContext.js     delt state: posteringer og bilag
-services/aiScan.js          kald til vision-model, med simuleret fallback
-screens/                    de tre skærme
-styles/theme.js             design-tokens (farver, fonte, radius)
-styles/styles.js            al styling
-```
 
 ## Afgrænsning og kendte svagheder
 
